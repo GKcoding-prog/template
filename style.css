@@ -1,0 +1,285 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 8px;
+  align-items: center;
+}
+
+
+span {
+  margin-left: 20px;
+  font-size: smaller;
+}
+
+.social img {
+  width: 20px;
+  height: auto;
+}
+
+.contact {
+  font-size: smaller;
+}
+
+.navbar {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  margin: 0 50px 0 50px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 2;
+}
+
+
+.search-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  opacity: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  z-index: 1;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  max-width: 90%;
+}
+
+.search-bar.active {
+  width: 150px;
+  max-width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.search-bar.active .search-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.image-container {
+  background-image: url(images/IMG_6927.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  padding: 30px;
+  gap: 15px;
+  border-top: 2px solid orange;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    background-size: contain;
+    padding: 15px;
+  }
+  .notice {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    background-size: cover;
+    padding: 10px;
+  }
+  .notice {
+    padding: 10px;
+  }
+}
+
+
+.H1 {
+  color: rgb(38, 38, 241);
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.P1 {
+  margin-bottom: 0.9rem;
+  color: rgb(38, 38, 241);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  color: rgb(70, 70, 232);
+  margin-bottom: 1rem;
+}
+
+.hero {
+  background: url("hero.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #2932e6;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 1px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  width: 100px;
+}
+
+.why-us {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.why-us h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.why-us .images img {
+  width: 45%;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+}
+
+.cont1 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 500px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 60px;
+  gap: 10px;
+}
+
+.myp {
+  color: #003366;
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.myh {
+  line-height: 1.2;
+  font-size: small;
+  color: #003366;
+}
+
+.images {
+  position: relative;
+  width: 500px;
+}
+
+.img1 {
+  position: relative;
+  z-index: -1;
+  box-shadow: 5px 5px #ffaa00;
+}
+
+.img2 {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  z-index: 2;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  background: #003366;
+  color: #fff;
+  padding: 10px 0;
+}
