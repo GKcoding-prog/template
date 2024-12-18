@@ -1,27 +1,8 @@
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  margin: 0; 
-  padding: 0;
-}
-.navbar {
-  background-color: #004466;
-  color: #fff;
-  padding: 10px 0;
-  font-size: 0.9rem;
 }
 
 .container {
@@ -30,8 +11,8 @@ ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  height: 8px;
   align-items: center;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 span {
@@ -43,16 +24,6 @@ span {
   width: 20px;
   height: auto;
 }
-.social a {
-  margin: 0 10px;
-  transition: color 0.3s ease;
-  color: yellowgreen;
-}
-
-.social a:hover {
-  color: #ccff00;
-}
-
 
 .contact {
   font-size: smaller;
@@ -65,38 +36,34 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .navigation {
-  margin: 0 50px 0 50px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 1px;
+  margin: 0 50px;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .navigation ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
-.navigation nav ul li a {
+
+.navigation ul li a {
   text-decoration: none;
-  color: #004466;
-  transition: color 0.3s;
-  font-weight: 600;
-  margin: 0 15px;
-}
-.navigation nav ul li a:hover {
-  color: #ff6600;
 }
 
 .search {
@@ -113,7 +80,6 @@ span {
   padding: 5px;
   z-index: 2;
 }
-
 
 .search-bar {
   position: absolute;
@@ -137,14 +103,6 @@ span {
   z-index: 3;
 }
 
-.search-bar.active .search-icon {
-  opacity: 0;
-  pointer-events: none;
-}
-.search-bar:focus {
-  outline: 2px solid #f48235;
-}
-
 .image-container {
   background-image: url(images/IMG_6927.jpg);
   background-size: cover;
@@ -160,9 +118,8 @@ span {
 .notice {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  /* inset: 0 auto; */
   width: 400px;
   height: 220px;
   background: rgba(255, 255, 255, 0.3);
@@ -188,6 +145,14 @@ span {
     width: 100%;
     padding: 15px;
   }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
@@ -198,8 +163,17 @@ span {
   .notice {
     padding: 10px;
   }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
-
 
 .H1 {
   color: rgb(38, 38, 241);
@@ -259,7 +233,8 @@ span {
 }
 
 .why-us .images img {
-  width: 45%;
+  width: 100%;
+  max-width: 300px; /* Adjusted for responsiveness */
   margin: 10px;
   border-radius: 5px;
 }
@@ -269,6 +244,7 @@ span {
   justify-content: space-between;
   align-items: center;
   padding-left: 0;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .cont1 {
@@ -276,7 +252,8 @@ span {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   text-align: left;
   margin: 0 auto;
   padding: 60px;
@@ -298,7 +275,8 @@ span {
 
 .images {
   position: relative;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .img1 {
@@ -319,143 +297,7 @@ span {
 
 footer {
   text-align: center;
-  background: #004466;
+  background: #003366;
   color: #fff;
   padding: 10px 0;
-  font-size: 0.9rem;
-  margin-top: 20px;
 }
-
-/* Hero Section */
-.home-intro {
-  background: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc') no-repeat center center/cover;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.home-intro .content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.home-intro .content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #ff6600;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #cc5200;
-}
-
-/* Cards Section */
-.home-cards {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 20px;
-  width: 30%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-  color: #004466;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #555;
-  font-size: 0.9rem;
-}
-
-/* Page Content Styling */
-.page-content {
-  padding: 50px 20px;
-  background-color: #f8f9fa;
-  text-align: center;
-  color: #333;
-}
-
-.page-content .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
-
-.page-content h2 {
-  font-size: 2rem;
-  color: #004466;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.page-content p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.page-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 0;
-}
-
-.page-list li {
-  background-color: #ff6600;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.page-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.page-list a {
-  display: block;
-  color: white;
-  padding: 15px 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  width: 100px;
-}
-
-.page-list a:hover {
-  background-color: #cc5200;
-}
-
